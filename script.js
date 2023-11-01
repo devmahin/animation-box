@@ -1,11 +1,16 @@
-const allItem = document.getElementsByClassName("box")
-const text_body = document.querySelectorAll(".text-body")
-console.log(text_body)
+const main = document.getElementsByClassName("item")
+const hiddenbox = document.querySelector(".hiddenbox")
+const addicon = document.getElementsByClassName("add")
+const close = document.getElementsByClassName("close")
 
 
-for(i=0; i<allItem.length; i++){
-    console.log(allItem[i])
-    allItem[i].addEventListener("click", (value,index) => {
-        text_body[i].classList.toggle("active")
+
+for(let i=0; i<main.length; i++){
+    main[i].addEventListener("click", (e) => {
+       let result =  main[i].classList.toggle("active")
+       if(result){
+        close[i].style.display = "block"
+       }
     })
+
 }
