@@ -9,7 +9,11 @@ for(let i=0; i<main.length; i++){
     main[i].addEventListener("click", (e) => {
        let result =  main[i].classList.toggle("active")
        if(result){
-        close[i].style.display = "block"
+        addicon[i].style.display = "none";
+        close[i].style.display = "block";
+       }else{
+        addicon[i].style.display = "block";
+        close[i].style.display = "none";
        }
     })
 
